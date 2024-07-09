@@ -76,7 +76,7 @@ export default function Home() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+2350</div>
+                  <div className="text-2xl font-bold">+5,30,876</div>
                   <p className="text-xs text-muted-foreground">
                     +180.1% from last month
                   </p>
@@ -100,7 +100,7 @@ export default function Home() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+12,234</div>
+                  <div className="text-2xl font-bold">+92,832$</div>
                   <p className="text-xs text-muted-foreground">
                     +19% from last month
                   </p>
@@ -125,7 +125,7 @@ export default function Home() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+573</div>
+                  <div className="text-2xl font-bold">+1000</div>
                   <p className="text-xs text-muted-foreground">
                     +201 since last hour
                   </p>
