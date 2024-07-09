@@ -1,0 +1,45 @@
+.gal-501 {
+  position: absolute;
+  width: 320px;
+  top: 91px;
+  right: 15px;
+  transform: scale(0); /* Initially hidden */
+  animation: scaleIn 1s ease forwards; /* Animation properties */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0); /* Start with no scale */
+  }
+  to {
+    transform: scale(1); /* Scale to normal size */
+  }
+}
+
+.gal-502 {
+  position: absolute;
+  right: 23px;
+  top: 9px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+}
+
+@media (max-width: 480px) {
+  .register {
+    width: 320px;
+  }
+  .gal-501 {
+    position: unset;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}

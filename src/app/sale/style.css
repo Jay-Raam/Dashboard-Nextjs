@@ -1,0 +1,36 @@
+.selected-order {
+  margin: 0 auto;
+  position: fixed;
+  top: 45px;
+  right: 0;
+  left: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  z-index: 1010;
+}
+
+.order-details-container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+}
+
+.order-details-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.order-details-item {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: black;
+}

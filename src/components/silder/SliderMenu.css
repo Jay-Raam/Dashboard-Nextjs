@@ -1,0 +1,28 @@
+.sliderMenu {
+  width: 300px;
+}
+
+.menuItems {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: sticky;
+  top: 0;   
+}
+
+.show {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 2px solid #3333334a;
+}
+
+@media (max-width: 992px) {
+  .sliderMenu {
+    display: none;
+  }
+}

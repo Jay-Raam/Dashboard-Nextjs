@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.two-01 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+
+.color {
+  color: Red;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.one-02 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 2px solid #00000062;
+}
+
+.one-03 {
+  cursor: pointer;
+  width: 100%;
+}
+
+.one-04 {
+  text-align: center;
+  width: 225px;
+}
+
+/* loading st */
+.loader {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  transform: scale(2);
+  border-radius: 50%;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.loader::after {
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  display: block;
+  border-left: 1px solid #000000;
+  content: "";
+  left: 14px;
+  border-radius: 1px;
+  top: 4px;
+  animation-duration: 1s;
+}
+
+.loader::before {
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  display: block;
+  border-left: 1px solid #000;
+  content: "";
+  left: 14px;
+  border-radius: 1px;
+  top: 4px;
+  animation-duration: 40s;
+}
+
+.loader::before,
+.loader::after {
+  transform-origin: bottom;
+  animation-name: dial;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes dial {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* loading end */
+
+/* selected-anime */
+
+.selected-anime {
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 1010;
+}
+
+.selected-container {
+  max-width: 1220px;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 16px;
+  display: flex;
+  gap: 16px;
+  border: 2px solid #0000007e;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+}
+.flex-00001 {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.trailer-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.one-003 {
+  width: 200px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.one-004 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.one-005 {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.flex-00001 {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+  width: 100%;
+  justify-content: center;
+}
+
+.flex-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+p span {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.main-00001 {
+  margin-left: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.main-00001:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  height: 438px;
+  width: 100%;
+}
+
+.close-0001 {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 60px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* For screens up to 768px (medium screens and below) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .flex-0001 {
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  p {
+    flex-direction: column;
+  }
+}
+
+/* For screens up to 480px (small screens and below) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .flex-00001 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For screens up to 320px (extra small screens and below) */
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+
+  iframe {
+    height: 219px;
+    width: 100%;
+  }
+
+  .selected-container {
+    flex-direction: column;
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+  .close-0001 {
+    left: 17px;
+  }
+}
