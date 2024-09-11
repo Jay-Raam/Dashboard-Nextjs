@@ -14,7 +14,7 @@ import "./style.css";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full justify-between p-0 max-w-[1200px] mx-auto my-0">
+    <main className="flex flex-col items-center w-full justify-between p-0 mx-auto my-0 pb-5">
       <div className="flex flex-wrap w-full">
         <Tabs defaultValue="overview" className="space-y-4 w-full">
           <TabsList>
@@ -29,7 +29,7 @@ export default function Home() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="space-y-4">
-            <div className="chat flex gap-4 flex-wrap w-full justify-center item-center">
+            <div className="chat flex gap-4 flex-wrap w-full justify-center item-center mt-5">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
@@ -132,8 +132,8 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-            <div className="chat-1 flex flex-wrap flex-col md:flex-row justify-center item-center mb-5 max-w-[1200px]">
-              <Card className="col-span-3 chat-6 mx-auto my-0">
+            <div className="chat-1 flex flex-col md:flex-row gap-5 justify-center item-center w-full">
+              <Card className="col-span-3 chat-6 mx-auto my-0 w-full md:w-1/2">
                 <CardHeader className="chat-6">
                   <CardTitle>Recent Sales</CardTitle>
                   <CardDescription>
@@ -144,7 +144,7 @@ export default function Home() {
                   <RecentSales />
                 </CardContent>
               </Card>
-              <Card className="col-span-3 w-[300px] mx-auto my-0 md:w-[500px] chat-6">
+              <Card className="col-span-3 mx-auto my-0 w-full md:w-1/2 chat-6">
                 <CardHeader>
                   <CardTitle>Overview</CardTitle>
                   <CardDescription>

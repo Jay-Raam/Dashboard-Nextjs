@@ -69,15 +69,18 @@ export default function Component() {
   };
 
   return (
-    <div className="login mx-auto max-w-sm mt-[50px]">
-      <Card className="mx-auto max-w-sm">
+    <div className="login mx-auto max-w-[1000px] my-0 w-[300px] md:w-[700px] lg:w-[900px] mt-[50px] ">
+      <Card className="mx-auto border-none">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">
             Login
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4 h-[600px] flex justify-center items-start gap-3 flex-col"
+          >
             <div className="space-y-2 w-full">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -89,7 +92,7 @@ export default function Component() {
                 onChange={handleChange}
               />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 w-full">
               <Label htmlFor="password">Password</Label>
               <Input
                 id="password"

@@ -239,7 +239,7 @@ interface OrderData {
   status: string;
 }
 
-export default function Component() {
+export default function Sale() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOrder, setSelectedOrder] = useState<OrderData | null>(null);
 

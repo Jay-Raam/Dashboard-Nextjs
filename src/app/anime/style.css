@@ -26,15 +26,6 @@
   padding: 10px;
 }
 
-.search-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-}
-
 .one-02 {
   list-style: none;
   display: flex;
@@ -66,7 +57,7 @@
   border: 1px solid;
   width: 30px;
   height: 30px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .loader::after {
@@ -74,7 +65,7 @@
   width: 0px;
   height: 10px;
   display: block;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #ffffff;
   content: "";
   left: 14px;
   border-radius: 1px;
@@ -87,7 +78,7 @@
   width: 0px;
   height: 10px;
   display: block;
-  border-left: 1px solid #000;
+  border-left: 1px solid #ffffff;
   content: "";
   left: 14px;
   border-radius: 1px;
@@ -122,18 +113,17 @@
   right: 0;
   overflow-y: auto;
   position: fixed;
-  top: 30px;
+  top: 0;
   width: 100%;
   z-index: 1010;
 }
 
 .selected-container {
-  max-width: 1220px;
+  max-width: 1550px;
   width: 100%;
   background: #fff;
   position: relative;
   margin: 0 auto;
-  border-radius: 16px;
   display: flex;
   gap: 16px;
   border: 2px solid #0000007e;
@@ -220,7 +210,7 @@ iframe {
 .close-0001 {
   position: absolute;
   top: 20px;
-  left: 60px;
+  left: 0px;
   color: rgb(0, 0, 0);
   font-size: 22px;
   cursor: pointer;
