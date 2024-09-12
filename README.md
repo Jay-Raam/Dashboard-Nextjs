@@ -8,7 +8,6 @@ Client: Next.js, TailwindCSS, Shadcn UI, TypeScript
 Hosting: Vercel
 
 ## Screenshots & Demo
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/423538207728513.66e274eea57b9.png" alt="Dashboard Overview" />
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d1c980207728513.66e274eea4a64.png" alt="Analytics Page" /> 
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ab5b9a207728513.66e274eea4344.png" alt="User Management" /> 
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/cd6cbb207728513.66e274eea51ff.png" alt="Settings Page" />
