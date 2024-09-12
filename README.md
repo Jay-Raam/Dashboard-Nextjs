@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Dashinos
+Welcome to Dashinos! I’m excited to present my project—a comprehensive and intuitive dashboard application designed to streamline your data management and analytics needs.
 
-## Getting Started
+## Tech Stack
 
-First, run the development server:
+Client: Next.js, TailwindCSS, Shadcn UI, TypeScript
+
+Hosting: Vercel
+
+## Screenshots & Demo
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/423538207728513.66e274eea57b9.png" alt="Dashboard Overview" />
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d1c980207728513.66e274eea4a64.png" alt="Analytics Page" /> 
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ab5b9a207728513.66e274eea4344.png" alt="User Management" /> 
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/cd6cbb207728513.66e274eea51ff.png" alt="Settings Page" />
+
+## Problems & Solutions 
+
+Problem 1: Performance Optimization
+Challenge: Ensuring the dashboard remains responsive and performs well as the volume of data increases.
+
+Solution: Used server-side pagination and optimized MongoDB queries to handle large datasets efficiently. Combined with client-side caching and efficient data fetching strategies, these techniques ensure a smooth and responsive user experience.
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Jay-Raam/Dashboard-Nextjs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+  cd Dashboard-Nextjs
+```
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing & Usage
 
-## Deploy on Vercel
+Feel free to use or adapt the front-end code for your own movie-related projects. I encourage you to customize the theme and components to fit your needs. 
+The content of this application is tailored to movie enthusiasts and showcases various film-related features, showcase my skills also.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Incase you have any questions or concerns, please feel free to reach out to me on [Instagram.](https://www.instagram.com/_ivanjay_/) I am always happy to help!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
