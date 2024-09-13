@@ -15,7 +15,7 @@ import "./style.css";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full justify-between p-0 mx-auto my-0 pb-5">
+    <main className="flex flex-col items-center w-full justify-between mx-auto my-0 pb-5">
       <div className="flex flex-wrap w-full">
         <Tabs defaultValue="overview" className="space-y-4 w-full">
           <TabsList>
@@ -29,7 +29,7 @@ export default function Home() {
               Notifications
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="space-y-4">
+          <TabsContent value="overview" className="space-y-4 py-3 mt-0">
             <div className="chat flex gap-4 flex-wrap w-full justify-center item-center mt-5">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
