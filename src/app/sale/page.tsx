@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenuTrigger,
@@ -33,10 +33,26 @@ interface OrderData {
 export default function Sale() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOrder, setSelectedOrder] = useState<OrderData | null>(null);
+  const [noResults, setNoResults] = useState(false);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchQuery(e.target.value.toLowerCase());
   };
+
+  // Update noResults based on filteredData
+  useEffect(() => {
+    const filteredData = data.filter(
+      (item) =>
+        item.customer.toLowerCase().includes(searchQuery) ||
+        item.order.toLowerCase().includes(searchQuery) ||
+        item.channel.toLowerCase().includes(searchQuery) ||
+        item.date.toLowerCase().includes(searchQuery) ||
+        item.total.toLowerCase().includes(searchQuery) ||
+        item.status.toLowerCase().includes(searchQuery)
+    );
+
+    setNoResults(filteredData.length === 0);
+  }, [searchQuery]);
 
   const filteredData = data.filter(
     (item) =>
@@ -120,6 +136,11 @@ export default function Sale() {
                     </TableCell>
                   </TableRow>
                 ))}
+                {noResults && (
+                  <p className="text-red-500 mb-4 mt-4 text-center flex justify-center items-center">
+                    No items found
+                  </p>
+                )}
               </TableBody>
             </Table>
           </div>
