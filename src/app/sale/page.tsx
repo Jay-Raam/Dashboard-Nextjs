@@ -1,214 +1,5 @@
 "use client";
 
-const data: OrderData[] = [
-  {
-    order: "#1234",
-    customer: "Evelyn Scott",
-    channel: "Online Store",
-    date: "April 20, 2023",
-    total: "$37.40",
-    status: "Shipped",
-  },
-
-  {
-    order: "#3456",
-    customer: "Michael Young",
-    channel: "Online Store",
-    date: "May 17, 2023",
-    total: "$64.75",
-    status: "Shipped",
-  },
-
-  {
-    order: "#5678",
-    customer: "Emily Hall",
-    channel: "Online Store",
-    date: "June 28, 2023",
-    total: "$19.99",
-    status: "Shipped",
-  },
-
-  {
-    order: "#7890",
-    customer: "Alexander King",
-    channel: "Online Store",
-    date: "July 15, 2023",
-    total: "$53.60",
-    status: "Shipped",
-  },
-
-  {
-    order: "#8901",
-    customer: "Ava Wright",
-    channel: "Online Store",
-    date: "August 9, 2023",
-    total: "$76.25",
-    status: "Shipped",
-  },
-
-  {
-    order: "#9012",
-    customer: "Daniel Adams",
-    channel: "Online Store",
-    date: "September 3, 2023",
-    total: "$42.90",
-    status: "Shipped",
-  },
-
-  {
-    order: "#1123",
-    customer: "Olivia Brown",
-    channel: "Online Store",
-    date: "October 22, 2023",
-    total: "$57.80",
-    status: "Shipped",
-  },
-  {
-    order: "#3201",
-    customer: "Priya",
-    channel: "Online Store",
-    date: "February 04, 2024",
-    total: "$105.25",
-    status: "Shipped",
-  },
-  {
-    order: "#3202",
-    customer: "Jayam",
-    channel: "Online Store",
-    date: "June 10, 2024",
-    total: "$60.35",
-    status: "Panding",
-  },
-  {
-    order: "#3208",
-    customer: "Kalai",
-    channel: "Shop",
-    date: "July 04, 2024",
-    total: "$55.70",
-    status: "Panding",
-  },
-  {
-    order: "#3204",
-    customer: "Gayathri",
-    channel: "Shop",
-    date: "June 28, 2022",
-    total: "$120.99",
-    status: "Paid",
-  },
-  {
-    order: "#3205",
-    customer: "Bob",
-    channel: "Online Store",
-    date: "February 30, 2024",
-    total: "$132.00",
-    status: "Paid",
-  },
-  {
-    order: "#3209",
-    customer: "Ava Johnson",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$81.99",
-    status: "Shipped",
-  },
-  {
-    order: "#3299",
-    customer: "Johnson",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$32.99",
-    status: "Paid",
-  },
-  {
-    order: "#3278",
-    customer: "gaya",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$49.99",
-    status: "Paid",
-  },
-  {
-    order: "#3109",
-    customer: "John",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$74.99",
-    status: "Shipped",
-  },
-  {
-    order: "#3165",
-    customer: "Johnson",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$86.99",
-    status: "Paid",
-  },
-  {
-    order: "#3232",
-    customer: "bob",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$36.99",
-    status: "Shipped",
-  },
-  {
-    order: "#3680",
-    customer: "Sisiy",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$22.99",
-    status: "Paid",
-  },
-  {
-    order: "#3550",
-    customer: "admin",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$45.99",
-    status: "Shipped",
-  },
-  {
-    order: "#3203",
-    customer: "lovely",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$21.99",
-    status: "Paid",
-  },
-  {
-    order: "#3073",
-    customer: "swift",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$69.99",
-    status: "Shipped",
-  },
-  {
-    order: "#3571",
-    customer: "raam",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$90.99",
-    status: "Paid",
-  },
-  {
-    order: "#3678",
-    customer: "jay",
-    channel: "Shop",
-    date: "January 5, 2022",
-    total: "$112.99",
-    status: "Paid",
-  },
-  {
-    order: "#3405",
-    customer: "mainly",
-    channel: "Online Store",
-    date: "January 5, 2022",
-    total: "$48.99",
-    status: "Paid",
-  },
-];
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -228,7 +19,7 @@ import {
 import { MoreHorizontalIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import "./style.css";
-import { IoMdClose } from "react-icons/io";
+import { data } from "./data";
 
 interface OrderData {
   order: string;
@@ -244,9 +35,18 @@ export default function Sale() {
   const [selectedOrder, setSelectedOrder] = useState<OrderData | null>(null);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const value = e.target.value;
-    setSearchQuery(value);
+    setSearchQuery(e.target.value.toLowerCase());
   };
+
+  const filteredData = data.filter(
+    (item) =>
+      item.customer.toLowerCase().includes(searchQuery) ||
+      item.order.toLowerCase().includes(searchQuery) ||
+      item.channel.toLowerCase().includes(searchQuery) ||
+      item.date.toLowerCase().includes(searchQuery) ||
+      item.total.toLowerCase().includes(searchQuery) ||
+      item.status.toLowerCase().includes(searchQuery)
+  );
 
   const handleClose = () => {
     setSelectedOrder(null);
@@ -283,49 +83,43 @@ export default function Sale() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {data
-                  .filter((item) =>
-                    item.customer
-                      .toLowerCase()
-                      .includes(searchQuery.toLowerCase())
-                  )
-                  .map((filteredItem) => (
-                    <TableRow key={filteredItem.order}>
-                      <TableCell className="font-medium">
-                        {filteredItem.order}
-                      </TableCell>
-                      <TableCell>{filteredItem.customer}</TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        {filteredItem.channel}
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        {filteredItem.date}
-                      </TableCell>
-                      <TableCell className="text-right">
-                        {filteredItem.total}
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        {filteredItem.status}
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <DropdownMenu>
-                          <DropdownMenuTrigger asChild>
-                            <Button size="icon" variant="ghost">
-                              <MoreHorizontalIcon className="w-4 h-4" />
-                              <span className="sr-only">Actions</span>
-                            </Button>
-                          </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end">
-                            <DropdownMenuItem
-                              onClick={() => handleEdit(filteredItem)}
-                            >
-                              View order
-                            </DropdownMenuItem>
-                          </DropdownMenuContent>
-                        </DropdownMenu>
-                      </TableCell>
-                    </TableRow>
-                  ))}
+                {filteredData.map((filteredItem) => (
+                  <TableRow key={filteredItem.order}>
+                    <TableCell className="font-medium">
+                      {filteredItem.order}
+                    </TableCell>
+                    <TableCell>{filteredItem.customer}</TableCell>
+                    <TableCell className="hidden md:table-cell">
+                      {filteredItem.channel}
+                    </TableCell>
+                    <TableCell className="hidden md:table-cell">
+                      {filteredItem.date}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      {filteredItem.total}
+                    </TableCell>
+                    <TableCell className="hidden sm:table-cell">
+                      {filteredItem.status}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button size="icon" variant="ghost">
+                            <MoreHorizontalIcon className="w-4 h-4" />
+                            <span className="sr-only">Actions</span>
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuItem
+                            onClick={() => handleEdit(filteredItem)}
+                          >
+                            View order
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </div>
