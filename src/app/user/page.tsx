@@ -12,8 +12,8 @@ export default async function FetchData() {
 
   return (
     <>
-      <div className="user flex justify-center items-center gap-5 flex-col">
-        <div className="container mx-auto my-0 flex flex-wrap max-w-[1550px]">
+      <div className="user flex justify-center items-center gap-5 flex-col max-w-[1550px] mx-auto my-0 ">
+        <div className="container flex flex-wrap">
           {data.map((item: Param) => (
             <div
               key={item.id}

@@ -9,7 +9,10 @@ import Menu from "@/components/navbar";
 import Link from "next/link";
 
 // Import the Bebas Neue font
-const arimo = Arimo({ subsets: ["latin"] });
+const arimo = Arimo({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 // Metadata for the page
 export const metadata: Metadata = {
@@ -35,11 +38,11 @@ export default function RootLayout({
         >
           <div className="flex items-center justify-between w-full mx-auto my-0 mt-6 mb-9 max-w-[1550px]">
             <Link href="/">
-              <h1 className="font-semibold text-3xl font-ewert md:text-5xl ml-[40px]">
+              <h1 className="font-semibold text-3xl font-ewert md:ml-[60px]">
                 Dashinos
               </h1>
             </Link>
-            <div className="flex gap-3 mr-[40px]">
+            <div className="flex gap-3 mr-3 md:mr-[40px]">
               <Darkmode />
               <div className="show-1">
                 <SheetSide />

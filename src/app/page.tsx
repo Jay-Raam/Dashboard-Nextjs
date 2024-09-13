@@ -10,6 +10,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import RecentSales from "@/components/RecentSales";
+import { CompanyData } from "@/components/ComapnyIndex";
 import "./style.css";
 
 export default function Home() {
@@ -132,29 +133,32 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-            <div className="chat-1 flex flex-col md:flex-row gap-5 justify-center item-center w-full">
-              <Card className="col-span-3 chat-6 mx-auto my-0 w-full md:w-1/2">
-                <CardHeader className="chat-6">
-                  <CardTitle>Recent Sales</CardTitle>
-                  <CardDescription>
-                    You made 265 sales this month.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="chat-4">
-                  <RecentSales />
-                </CardContent>
-              </Card>
-              <Card className="col-span-3 mx-auto my-0 w-full md:w-1/2 chat-6">
-                <CardHeader>
-                  <CardTitle>Overview</CardTitle>
-                  <CardDescription>
-                    You made 500$ sales this month.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Bar />
-                </CardContent>
-              </Card>
+            <div className="chat-1 flex flex-col gap-5 justify-center item-center w-full ">
+              <div className="flex justify-center items-center gap-4 flex-col md:flex-row">
+                <Card className="col-span-3 chat-6 mx-auto my-0 w-full md:w-1/2">
+                  <CardHeader className="chat-6 items-start">
+                    <CardTitle>Recent Sales</CardTitle>
+                    <CardDescription>
+                      You made 265 sales this month.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="chat-4">
+                    <RecentSales />
+                  </CardContent>
+                </Card>
+                <Card className="col-span-3 mx-auto my-0 w-full md:w-1/2 chat-6 items-start">
+                  <CardHeader className="items-start">
+                    <CardTitle>Overview</CardTitle>
+                    <CardDescription>
+                      You made 500$ sales this month.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Bar />
+                  </CardContent>
+                </Card>
+              </div>
+              <CompanyData />
             </div>
           </TabsContent>
         </Tabs>
